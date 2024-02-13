@@ -1,0 +1,404 @@
+@use './constants/colors';
+@use './constants/breakpoints';
+
+.contactSection {
+    height: 100svh;
+    width: 100%;
+    position: relative;
+    // background-color: colors.$secondary;
+    background-image: url('/Background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.contactPage {
+    padding-left: 8rem;
+    padding-right: 4rem;
+    padding-top: 4rem;
+    height: 90%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 40%;
+    align-items: center;
+}
+
+.sayHelloContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+
+    .sayHello {
+        font-size: 3rem;
+        font-weight: 400;
+        font-family: var(--font-playfair), serif;
+        color: colors.$strong_neutral;
+        line-height: 1.1;
+        text-align: right;
+        text-transform: uppercase;
+    }
+}
+
+.contacttext {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.75rem;
+    height: 100%;
+
+
+    h2 {
+        font-size: 5rem;
+        color: colors.$primary;
+        transform: translateX(-5px);
+    }
+
+    p {
+        font-size: 1.5rem;
+        font-weight: 300;
+    }
+}
+
+form.contact {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+
+    // Autofill
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+        -webkit-box-shadow: 0 0 0 30px colors.$secondary inset !important;
+    }
+
+    .inputrow {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        gap: 3rem;
+    }
+
+    label {
+        display: inline-block;
+        font-family: var(--font-istok), sans-serif;
+        color: colors.$strong_neutral;
+        font-weight: 300;
+        line-height: normal;
+        transform: translateX(-1px);
+    }
+
+    .inputContainer:focus-within {
+
+        label {
+            color: colors.$primary;
+        }
+    }
+
+    input[type=text],
+    input[type=email] {
+        display: inline-block;
+        margin-top: 0.5rem;
+        width: 100%;
+        padding: 0.7rem;
+        background-color: transparent;
+        border: 1.5px solid colors.$strong_neutral;
+        font-size: 1.2rem;
+        font-weight: 300;
+        font-family: var(--font-istok), sans-serif;
+        color: colors.$strong_neutral;
+        position: relative;
+
+        &:focus {
+            outline: none;
+            border: 1.5px solid colors.$primary;
+        }
+    }
+
+    textarea {
+        display: inline-block;
+        margin-top: 1rem;
+        width: 100%;
+        padding: 0.7rem;
+        background-color: transparent;
+        border: 1.5px solid colors.$strong_neutral;
+        font-size: 1.2rem;
+        font-weight: 300;
+        font-family: var(--font-istok), sans-serif;
+        color: colors.$strong_neutral;
+        resize: none;
+        height: 10rem;
+
+        &:focus {
+            outline: none;
+            border: 1.5px solid colors.$primary;
+        }
+    }
+
+    button.sendbutton {
+        transform: translateY(-1rem);
+        background-color: colors.$strong_neutral;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.6rem;
+        border: none;
+        font-size: 1.3rem;
+        color: colors.$secondary;
+        padding: 0.8rem 3rem 0.8rem 3rem;
+        width: max-content;
+        margin-top: 1rem;
+
+        transform-origin: center;
+        transition: 200ms;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+.line {
+    position: absolute;
+    bottom: 0;
+    left: calc(4rem + 20px);
+    width: 1px;
+    height: calc(100% - 4rem - 20px);
+    background-color: colors.$primary;
+    z-index: 9999;
+}
+
+
+@media only screen and (max-width: breakpoints.$xl) {
+
+    .contactSection {
+        height: auto;
+    }
+
+    .contactPage {
+        padding: 8rem 8rem;
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 2rem;
+    }
+
+    .contacttext {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 0.5rem;
+        height: 100%;
+        padding-bottom: 2rem;
+
+        h2 {
+            font-size: 5rem;
+            color: colors.$primary;
+        }
+
+        p {
+            font-size: 1.2rem;
+            text-align: center;
+            br {
+                display: none;
+            }
+        }
+    }
+
+    .sayHelloContainer {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    
+        .sayHello {
+            font-size: 2.5rem;
+            font-weight: 400;
+            font-family: var(--font-playfair), serif;
+            color: colors.$strong_neutral;
+            line-height: 1.1;
+            text-align: right;
+            text-transform: uppercase;
+
+            br {
+                display: none;
+            }
+        }
+    }
+
+    form.contact {
+        button.sendbutton {
+            transform: translateY(-1rem);
+            background-color: colors.$strong_neutral;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            border: none;
+            font-size: 1.3rem;
+            color: colors.$secondary;
+            padding: 0.8rem 3rem 0.8rem 3rem;
+            width: 100%;
+            margin-top: 1rem;
+
+            transform-origin: center;
+            transition: 200ms;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    .footer {
+        height: max-content;
+        width: 100%;
+        background-color: colors.$primary;
+        position: relative;
+        padding: 1rem 4rem;
+    }
+
+    .footerContainer {
+        justify-content: space-between;
+    }
+
+}
+
+
+@media only screen and (max-width: breakpoints.$md) {
+
+    .line {
+        display: none;
+    }
+
+    .contactSection {
+        height: auto;
+    }
+
+    .contactPage {
+        padding: 0 4rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contactSection {
+        height: auto;
+    }
+
+    .contactPage {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: 5rem;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .sayHelloContainer {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    
+        .sayHello {
+            font-size: 2rem;
+            font-weight: 400;
+            font-family: var(--font-playfair), serif;
+            color: colors.$strong_neutral;
+            line-height: 1.1;
+            text-align: right;
+            text-transform: uppercase;
+
+            br {
+                display: none;
+            }
+        }
+    }
+
+    .contacttext {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 0.5rem;
+        height: 100%;
+        padding-bottom: 2rem;
+
+        h2 {
+            font-size: 4rem;
+            color: colors.$primary;
+            transform: translateX(-5px);
+        }
+
+        p {
+            font-size: 1rem;
+            text-align: center;
+        }
+    }
+
+    form.contact {
+        .inputrow {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: 1.5rem;
+        }
+
+        label {
+            font-size: 1rem;
+        }
+
+        input[type=text],
+        input[type=email] {
+            font-size: 1rem;
+        }
+
+        textarea {
+            font-size: 1rem;
+        }
+
+        button.sendbutton {
+            transform: translateY(-1rem);
+            background-color: colors.$strong_neutral;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            border: none;
+            font-size: 1.3rem;
+            color: colors.$secondary;
+            padding: 0.8rem 3rem 0.8rem 3rem;
+            width: 100%;
+            margin-top: 1rem;
+
+            transform-origin: center;
+            transition: 200ms;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    .footer {
+        height: max-content;
+        width: 100%;
+        background-color: colors.$primary;
+        position: relative;
+        padding: 1rem;
+    }
+
+    .footerContainer {
+        justify-content: center;
+
+        div {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,17 @@
+@use './constants/colors';
+
+.chip {
+    display: grid;
+    place-content: center center;
+    background-color: colors.$strong_neutral;
+    width: max-content;
+    padding: 0.6rem 1rem;
+    border-radius: 3rem;
+
+    h4 {
+        color: colors.$soft_neutral;
+        font-size: 1rem;
+        font-weight: 400;
+        font-family: var(--font-istok), sans-serif;
+    }
+}

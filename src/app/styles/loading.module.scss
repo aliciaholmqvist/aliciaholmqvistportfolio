@@ -1,0 +1,32 @@
+@use './constants/colors';
+@use './constants/breakpoints';
+
+.loadingPage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3rem;
+    height: 100dvh;
+    width: 100dvw;
+    z-index: 99999;
+    background-color: colors.$primary;
+    position: absolute;
+    top:0;
+    left: 0;
+
+    p {
+        color: colors.$strong_neutral;
+        font-size: 1.1rem;
+        font-weight: 400;
+        font-family: var(--font-istok), sans-serif;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: breakpoints.$md) {
+
+    .loadingBar {
+        width: 80dvw;
+    }
+}

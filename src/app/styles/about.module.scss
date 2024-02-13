@@ -1,0 +1,363 @@
+@use './constants/colors';
+@use './constants/breakpoints';
+
+.aboutSection {
+    height: auto;
+    position: relative;
+    width: 100%;
+    background-color: colors.$secondary;
+}
+
+.line {
+    position: absolute;
+    bottom: 0;
+    left: calc(4rem + 20px);
+    width: 1px;
+    height: calc(100% - 4rem - 20px);
+    background-color: colors.$primary;
+    z-index: 9999;
+}
+
+.aboutContainer {
+    width: 100%;
+    height: 100%;
+    padding: 8rem 4rem 0 8rem;
+}
+
+.introduction {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 40% auto;
+    align-items: center;
+
+    p {
+        line-height: 1.5;
+        font-size: 1rem;
+        font-weight: 400;
+        font-family: var(--font-istok), sans-serif;
+        color: colors.$strong_neutral;
+    }
+
+    span {
+        color: colors.$primary;
+        font-weight: 700;
+        line-height: 3;
+        font-size: 1.5rem;
+    }
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: 400;
+    font-family: var(--font-playfair), serif;
+    color: colors.$strong_neutral;
+    line-height: 1.1;
+    text-align: right;
+    text-transform: uppercase;
+}
+
+.cheesy {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2rem;
+}
+
+.studentSection {
+    padding-top: 8rem;
+    width: 100%;
+    background-color: transparent;
+    display: grid;
+}
+
+.student {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% auto;
+    gap: 12rem;
+    background-color: transparent;
+
+}
+
+.information {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    transform: translateX(5px);
+    h2 {
+        padding-top: 2rem;
+        font-size: 1.2rem;
+        font-weight: 600;
+        font-family: var(--font-istok), serif;
+        color: colors.$strong_neutral;
+        line-height: 1.1;
+        text-align: left;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+        font-weight: 400;
+        font-family: var(--font-istok), serif;
+        color: colors.$strong_neutral;
+        line-height: 1.1;
+        text-align: left;
+    }
+    div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.titleHeader {
+    position: relative;
+
+    .bubble {
+        position: absolute;
+        top: 0;
+        left: calc(-1*(4rem + 1.75rem));
+        transform: translateX(50%);
+        display: grid;
+        place-content: center center;
+        background-color: colors.$primary;
+        width: 3rem;
+        aspect-ratio: 1;
+        border-radius: 100%;
+        z-index: 9999;
+
+        h4 {
+            transform: translate(0px, 2px);
+        }
+    }
+
+    h4 {
+        font-weight: 400;
+        font-family: var(--font-istok), sans-serif;
+        color: colors.$secondary;
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 3rem;
+        font-weight: 400;
+        font-family: var(--font-sen), sans-serif;
+        color: colors.$primary;
+    }
+}
+
+.skillChips {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    width: 100%;
+    height: 100%;
+
+    .chipsContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        font-family: var(--font-istok), sans-serif;
+        color: colors.$primary;
+    }
+
+    .chips {
+        display: flex;
+
+        flex-wrap: wrap;
+        gap: 0.7rem;
+    }
+}
+
+@media only screen and (max-width: breakpoints.$xl) {
+
+    .title {
+        text-align: center;
+    }
+    .cheesy {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .introduction {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    
+        p {
+            line-height: 1.5;
+            font-size: 1rem;
+            font-weight: 400;
+            font-family: var(--font-istok), sans-serif;
+            color: colors.$strong_neutral;
+            text-align: justify;
+        }
+    
+        span {
+            color: colors.$primary;
+            font-weight: 700;
+            line-height: 3;
+            font-size: 1.5rem;
+        }
+    }
+
+    .titleHeader {
+        position: relative;
+        width: 100%;
+    
+        h3 {
+            font-size: 2.5rem;
+            font-weight: 400;
+            font-family: var(--font-sen), sans-serif;
+            color: colors.$primary;
+        }
+    }
+
+    .studentSection {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 4rem 0rem;
+    }
+
+    .student {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    
+    }
+
+    .information {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 2rem;
+        transform: translateX(5px);
+        width: 100%;
+        
+        div {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+}
+
+@media only screen and (max-width: breakpoints.$md) {
+
+    .title {
+        text-align: center;
+    }
+    .cheesy {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+    
+    .line {
+        display: none;
+    }
+
+    .aboutContainer {
+        width: 100%;
+        height: 100%;
+        padding: 8rem 2rem;
+    }
+
+    .introduction {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    
+        p {
+            line-height: 1.5;
+            font-size: 1rem;
+            font-weight: 400;
+            font-family: var(--font-istok), sans-serif;
+            color: colors.$strong_neutral;
+            text-align: justify;
+        }
+    
+        span {
+            color: colors.$primary;
+            font-weight: 700;
+            line-height: 3;
+            font-size: 1.5rem;
+        }
+    }
+
+    .titleHeader {
+        position: relative;
+        width: 100%;
+    
+        .bubble {
+            display: none;
+        }
+    
+        h3 {
+            font-size: 2.5rem;
+            font-weight: 400;
+            font-family: var(--font-sen), sans-serif;
+            color: colors.$primary;
+        }
+    }
+
+    .studentSection {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 4rem 0rem;
+    }
+
+    .student {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    
+    }
+
+    .information {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 2rem;
+        transform: translateX(5px);
+        width: 100%;
+
+        div {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+}

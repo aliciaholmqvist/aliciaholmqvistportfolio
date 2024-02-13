@@ -1,0 +1,126 @@
+@use './constants/colors';
+@use './constants/breakpoints';
+
+.navBar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    padding: 2rem 4rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.navLinks {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+
+    li a {
+        display: inline-block;
+        text-decoration: none;
+        color: colors.$primary;
+        text-align: center;
+        font-size: 1.1rem;
+        font-weight: 400;
+        font-family: var(--font-istok), sans-serif;
+        color: colors.$primary;
+        line-height: normal;
+        transform-origin: center;
+        transition: 200ms ease-in-out;
+        transform: scale(1);
+
+        &:hover {
+            transform: scale(1.1);
+            color: colors.$strong_neutral;
+        }
+
+        &.active {
+            color: colors.$strong_neutral;
+        }
+    }
+
+    .lineBtw {
+        height: 1px;
+        width: 50px;
+        background-color: colors.$primary;
+    }
+
+    .lineStartEnd {
+        height: 1px;
+        width: 150px;
+        background-color: colors.$primary;
+    }
+}
+
+.mobileNav {
+    position: absolute;
+    width: 50%;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+    padding: 1rem 0;
+
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+        transform: translateX(-50%);
+    }
+}
+
+.navTrigger {
+    font-size: 2.2rem;
+    padding-right: 1rem;
+    position: relative;
+    z-index: 9999999;
+    cursor: pointer;
+}
+
+.slideOut {
+    width: 100%;
+    height: 100lvh;
+    background-color: colors.$primary;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+    padding: 8rem;
+
+    .navTrigger {
+        float: right;
+        padding: 1rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}
+
+.mobileLink {
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: var(--font-istok), sans-serif;
+    color: colors.$strong_neutral;
+}
+
+@media only screen and (max-width: breakpoints.$sm) {
+    .navBar {
+        display: none;
+    }
+
+    .mobileNav {
+        display: flex;
+    }
+}

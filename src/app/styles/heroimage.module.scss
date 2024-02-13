@@ -1,0 +1,44 @@
+@use './constants/colors';
+@use './constants/breakpoints';
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    height: max-content;
+    width: max-content;
+
+    div {
+        width: 220px;
+        height: 350px;
+        border-radius: 120px;
+        grid-row-start: 1;
+        grid-column-start: 1;
+        
+        &:nth-of-type(1) {
+            background-image: url('/pp.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            z-index: 9999;
+        }
+
+        &:nth-of-type(2) {
+            background-color: colors.$primary;
+            z-index: 9998;
+            transform: translate(15px, -10px);
+        }
+
+        &:nth-of-type(3) {
+            background-color: colors.$strong_neutral;
+            z-index: 9997;
+            transform: translate(30px, -20px);
+        }
+        
+    }
+}
+
+@media only screen and (max-width: breakpoints.$xl) {
+    .container {
+        display: none;
+    }
+}
