@@ -62,7 +62,7 @@ function ProjectOverview({ title, tags, text, imageSrc, imageAlt, projectNumber,
           </div>
 
           <div className={styles.rightContainer}>
-            <img className={styles.projectCover} src={imageSrc} alt={imageAlt} />
+            <Link href={href}><img className={styles.projectCover} src={imageSrc} alt={imageAlt} /></Link>
           </div>
         </div>
       </div>
