@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from '../styles/hero.module.scss'
 import NavBar from '../components/navbar'
-import HeroImage from '../components/heroImage.jsx'
+import HeroImage from '../components/heroimage'
 
 import { Typewriter } from 'react-simple-typewriter'
 

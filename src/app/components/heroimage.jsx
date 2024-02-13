@@ -11,4 +11,4 @@ function HeroImage() {
   )
 }
 
-export default HeroImage
+export default HeroImage;
