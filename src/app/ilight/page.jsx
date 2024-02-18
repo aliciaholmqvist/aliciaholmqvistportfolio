@@ -3,10 +3,9 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import PortfolioImage from '../components/portfolioimage';
 import styles from '../styles/portfolio.module.scss';
-import { TiArrowLeft, TiArrowRight } from 'react-icons/ti';
 import { IoClose } from "react-icons/io5";
 import LoadingScreen from '../loadingscreen';
-import { IoMdMail, IoLogoLinkedin, IoIosArrowDropupCircle } from "react-icons/io";
+import { IoMdMail, IoLogoLinkedin } from "react-icons/io";
 
 export default function ILight() {
     const [imageCount, setImageCount] = useState(0);
@@ -21,16 +20,25 @@ export default function ILight() {
                     <Link href='/' className={styles.closeIcon}>
                         <IoClose />
                     </Link>
-                    <PortfolioImage src='/iLight/00first-ilight.jpg' alt='Hero image of Maxivent OW' setImageCount={setImageCount} />
-                    <PortfolioImage src='/iLight/iLight-exxxp_01.jpg' alt='Scope of work and time table' setImageCount={setImageCount} />
-                    <PortfolioImage src='/iLight/iLight-exxxp_02.jpg' alt='Problems Title' setImageCount={setImageCount} />
-                    <PortfolioImage src='/iLight/iLight-exxxp_03.jpg' alt='Overview of Maxivent OW' setImageCount={setImageCount} />
-                    <PortfolioImage src='/iLight/iLight-exxxp_04.jpg' alt='Repairability' setImageCount={setImageCount} />
-                    <PortfolioImage src='/iLight/iLight-exxxp_05.jpg' alt='Exploded view' setImageCount={setImageCount} />
-                    <PortfolioImage src='/iLight/iLight-exxxp_06.jpg' alt='Air flow' setImageCount={setImageCount} />
-                    <PortfolioImage src='/iLight/iLight-exxxp_07.jpg' alt='Pressing button' setImageCount={setImageCount} />
-                    <PortfolioImage src='/iLight/iLight-exxxp_08.jpg' alt='Clear feedback text' setImageCount={setImageCount} />
-                    <PortfolioImage src='/iLight/Zlast-ilight.jpg' alt='UI Animation' setImageCount={setImageCount} />
+                    <PortfolioImage src='/iLight/iLight-first.jpg' alt='Two hands holding an tablet displaying iLight interface design. Orange stage lights in the background. Slogan reading ”You are the light designer. Let the show begin”.' setImageCount={setImageCount} />
+
+                    <PortfolioImage src='/iLight/iLight-slice_01.jpg' alt='Project Outline' setImageCount={setImageCount} />
+
+                    <PortfolioImage src='/iLight/iLight-slice_02.jpg' alt='Scope; Light rig software for small concert venues' setImageCount={setImageCount} />
+
+                    <PortfolioImage src='/iLight/iLight-slice_03.jpg' alt=' Approach ' setImageCount={setImageCount} />
+
+                    <PortfolioImage src='/iLight/iLight-slice_04.jpg' alt=' Design process visualisation ' setImageCount={setImageCount} />
+
+                    <PortfolioImage src='/iLight/iLight-slice_05.jpg' alt=' Layout-Low fidelity ' setImageCount={setImageCount} />
+
+                    <PortfolioImage src='/iLight/iLight-slice_06.jpg' alt=' Final design 1' setImageCount={setImageCount} />
+
+                    <PortfolioImage src='/iLight/iLight-slice_07.jpg' alt=' Final design 2' setImageCount={setImageCount} />
+
+                    <PortfolioImage src='/iLight/iLight-slice_08.jpg' alt='Final design 3' setImageCount={setImageCount} />
+
+                    <PortfolioImage src='/iLight/iLight-last.jpg' alt='Stylistic mock-up of iLight interface designUI Animation' setImageCount={setImageCount} />
                 </div>
                 <footer className={styles.footer}>
                     <div className="wrapper">
