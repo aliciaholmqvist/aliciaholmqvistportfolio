@@ -75,7 +75,7 @@ const NavBar = () => {
     <>
       <div className="wrapper">
         <nav className={styles.navBar}>
-          <Image src="/AH.svg" height={40} width={40} className={styles.logo} alt="logotype" />
+          <Image src="/AH.svg" height={80} width={80} className={styles.logo} alt="logotype" />
           <motion.ul className={styles.navLinks} variants={navVariants} initial="hidden" animate="show">
             <span className={styles.lineStartEnd}></span>
             <motion.li variants={itemVariants}><Link className={pathname === '/' ? styles.active : ''} href="/">Portfolio</Link></motion.li>
@@ -88,7 +88,7 @@ const NavBar = () => {
         </nav>
       </div>
       <div className={styles.mobileNav}>
-        <Image src="/AH.svg" height={40} width={40} className={styles.logo} alt="logotype" />
+        <Image src="/AH.svg" height={60} width={60} className={styles.logo} alt="logotype" />
         <div className={styles.navTrigger} onClick={handleToggle}>
           {!navOpen ? <RxHamburgerMenu/> : <RxCross1 /> }
         </div>
@@ -98,9 +98,9 @@ const NavBar = () => {
           <div className={styles.navTrigger} onClick={handleToggle}>
             {!navOpen ? <RxHamburgerMenu/> : <RxCross1 /> }
           </div>
-          <Link className={styles.mobileLink} href="/">Portfolio</Link>
-          <Link className={styles.mobileLink} href="/about">About</Link>
-          <Link className={styles.mobileLink} href="/contact">Contact</Link>
+          <Link className={styles.mobileLink} href="/" onClick={handleToggle}>Portfolio</Link>
+          <Link className={styles.mobileLink} href="/about" onClick={handleToggle}>About</Link>
+          <Link className={styles.mobileLink} href="/contact" onClick={handleToggle}>Contact</Link>
         </div>
       }
     </>
