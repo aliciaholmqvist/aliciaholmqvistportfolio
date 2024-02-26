@@ -33,10 +33,10 @@ export default function Home() {
         title={'Breathing box'}
         tags={['Tangible Interaction', 'Arduino', 'Prototyping']}
         text={'The Breathing Box is a calming device for the workplace. This tangible interface guides the user through breathing och meditation programs using visual, auduitory and haptic feedback.'}
-        imageSrc={'/BreBox-hero-construction.jpg'}
+        imageSrc={'/breathingboxoverview.jpg'}
         imageAlt={'Overview of Breating Box'}
         projectNumber={'3'}
-        href={'/'}
+        href={'/breathingbox'}
       />
       <ProjectOverview
         title={'Cykelkollen'}
