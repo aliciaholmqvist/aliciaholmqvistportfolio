@@ -75,7 +75,7 @@ const NavBar = () => {
     <>
       <div className="wrapper">
         <nav className={styles.navBar}>
-          <Image src="/AH.svg" height={80} width={80} className={styles.logo} alt="logotype" />
+          <Link href="/"><Image src="/AH.svg" height={80} width={80} className={styles.logo} alt="logotype" /></Link>
           <motion.ul className={styles.navLinks} variants={navVariants} initial="hidden" animate="show">
             <span className={styles.lineStartEnd}></span>
             <motion.li variants={itemVariants}><Link className={pathname === '/' ? styles.active : ''} href="/">Portfolio</Link></motion.li>
@@ -88,7 +88,7 @@ const NavBar = () => {
         </nav>
       </div>
       <div className={styles.mobileNav}>
-        <Image src="/AH.svg" height={60} width={60} className={styles.logo} alt="logotype" />
+        <Link href="/"><Image src="/AH.svg" height={60} width={60} className={styles.logo} alt="logotype" /></Link>
         <div className={styles.navTrigger} onClick={handleToggle}>
           {!navOpen ? <RxHamburgerMenu/> : <RxCross1 /> }
         </div>
