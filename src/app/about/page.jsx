@@ -7,7 +7,7 @@ import Chip from '../components/chip';
 
 export default function About() {
 
-  const skills = ['UX/UI', 'Prototyping', 'Service Design', 'HCI', 'Product Design', 'Field Research', 'Graphic Design', 'Python', 'CAD']
+  const skills = ['UX/UI', 'Prototyping', 'Service Design', 'Product Design', 'Field Research', 'Graphic Design', 'JavaScript', 'HTML/CSS', 'Python', 'CAD']
   const softwares = ['Figma', 'Adobe Package', 'CATIA', 'Microsoft Office', 'Autodesk Alias']
 
   return (
@@ -18,7 +18,7 @@ export default function About() {
         <div className={`${styles.aboutContainer} wrapper`}>
           <div className={styles.introduction}>
             <p><span>Hello!</span><br />
-              I am Alicia, a final year masters student in Interaction Design, Chalmers. I conducted my bachelors in Industrial Design Engineering at Chalmers, which share the user-centered aspect of Interaction design, which I love. As of now I focus my expertise more on digital products and user experience. Combinding design thinking and creativity with the structure of engineering, gives me comfort in that I can produce qualitative designs that I am proud of. In the end, my passion is about creating holistic solutions for end users, whether it be a digital product, a physical product or both!
+              I am Alicia, a newly graduated engineer in design from Chalmers University of Technology. I conducted my bachelors in Industrial Design Engineering, which share the user-centered aspect of Interaction design, which I love. As of now I focus my expertise more on digital products and user experience. Combinding design thinking and creativity with the structure of engineering, gives me comfort in that I can produce qualitative designs that I am proud of. In the end, my passion is about creating holistic solutions for end users, whether it be a digital product, a physical product or both!
               Take a look at my portfolio to find some of the projects from my bachelors and masters education!
               Don&apos;t hesitate to contact me!</p>
             <div className={styles.cheesy}>
