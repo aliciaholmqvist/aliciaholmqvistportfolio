@@ -21,24 +21,25 @@ export default function Home() {
       />
       
       <ProjectOverview
-        title={'iLight'}
-        tags={['Graphical Interface', 'iOS', 'UX/UI', 'Material Guidelines']}
-        text={'An iPad app for light rig controll at smaller venues. Adapted for intermediate users and following iOS guidelines.'}
-        imageSrc={'/ilightoverview.jpg'}
-        imageAlt={'Overview of iLight Project'}
-        projectNumber={'2'}
-        href={'/ilight'}
-      />
-
-      <ProjectOverview
         title={'Bemo'}
         tags={['Product Design', 'Form Theory', 'Market Analysis']}
         text={'BEMO is a new take on a home cinema projector integrated with smart home assistant to fulfill the needs of the future user group; generation Z in year 2030. This was a individual project where I explored form giving in a systematic manner.'}
         imageSrc={'/beamooverview.jpg'}
         imageAlt={'Overview of Bemo'}
-        projectNumber={'3'}
+        projectNumber={'2'}
         href={'/bemo'}
       />
+
+      <ProjectOverview
+        title={'iLight'}
+        tags={['Graphical Interface', 'iOS', 'UX/UI', 'Material Guidelines']}
+        text={'An iPad app for light rig controll at smaller venues. Adapted for intermediate users and following iOS guidelines.'}
+        imageSrc={'/ilightoverview.jpg'}
+        imageAlt={'Overview of iLight Project'}
+        projectNumber={'3'}
+        href={'/ilight'}
+      />
+
 
       <ProjectOverview
         title={'Breathing box'}
