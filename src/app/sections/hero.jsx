@@ -36,7 +36,7 @@ function Hero() {
               <HeroImage />
             </div>
             <div className={styles.lowerBar}>
-              <p className={styles.aboutText}>Creative design student based in Gothenburg. Passionate about creating holistic design solutions within UX, product and interaction design. Design by heart, engineer by practice.</p>
+              <p className={styles.aboutText}>Design engineer based in Gothenburg. Passionate about creating holistic design solutions within UX, product and interaction design. Designer by heart, engineer by practice.</p>
               <h2 className={styles.title}>Design <br></br>Portfolio</h2>
             </div>
           </div>
